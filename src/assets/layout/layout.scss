@@ -1,0 +1,74 @@
+@use "./fonts/_fonts";
+@import "primeicons/primeicons.css";
+
+html {
+  font-size: 14px;
+}
+
+:root {
+  --background: var(--p-surface-0);
+  --foreground: var(--p-surface-950);
+
+  --bg-gradient-from: var(--p-primary-800);
+  --bg-gradient-to: var(--p-primary-500);
+
+  --gradient-background: linear-gradient(
+    180deg,
+    var(--bg-gradient-from) 0%,
+    var(--bg-gradient-to) 100%
+  );
+  --gradient-background-to-top: linear-gradient(
+    0deg,
+    var(--bg-gradient-from) 0%,
+    var(--bg-gradient-to) 100%
+  );
+  --gradient-background-to-left: linear-gradient(
+    90deg,
+    var(--bg-gradient-from) 0%,
+    var(--bg-gradient-to) 100%
+  );
+  /* Shadows */
+  --card-shadow:
+    0px 1px 1px 0px rgba(0, 0, 0, 0.06),
+    0px -1px 1px 0px rgba(0, 0, 0, 0.06) inset,
+    0px 12px 3px 0px rgba(0, 0, 0, 0), 0px 8px 3px 0px rgba(0, 0, 0, 0.01),
+    0px 4px 3px 0px rgba(0, 0, 0, 0.03), 0px 2px 2px 0px rgba(0, 0, 0, 0.05),
+    0px 0px 1px 0px rgba(0, 0, 0, 0.06);
+
+  --black-card-shadow:
+    0px 1px 1px 0px rgba(0, 0, 0, 0.06),
+    0px -1px 1px 0px rgba(0, 0, 0, 0.06) inset,
+    0px 12px 3px 0px rgba(0, 0, 0, 0), 0px 8px 3px 0px rgba(0, 0, 0, 0.01),
+    0px 4px 3px 0px rgba(0, 0, 0, 0.03), 0px 2px 2px 0px rgba(0, 0, 0, 0.05),
+    0px 0px 1px 0px rgba(0, 0, 0, 0.06);
+
+  --blue-card-shadow:
+    0px 59px 16px -8px rgba(120, 149, 206, 0),
+    0px 38px 15px -8px rgba(120, 149, 206, 0.01),
+    0px 21px 13px -8px rgba(120, 149, 206, 0.04),
+    0px 9px 9px -4px rgba(120, 149, 206, 0.07),
+    0px 2px 5px 0px rgba(120, 149, 206, 0.08);
+
+  --stroke-shadow:
+    0px 1px 2px 0px rgba(164, 172, 185, 0.24),
+    0px 0px 0px 1px rgba(18, 55, 105, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: var(--p-surface-950);
+    --foreground: var(--p-surface-0);
+  }
+}
+
+body {
+  color: var(--p-surface-950);
+  background: var(--p-surface-0);
+  font-family: "InterDisplay", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.dark body {
+  color: var(--p-surface-0);
+  background: var(--p-surface-950);
+}
